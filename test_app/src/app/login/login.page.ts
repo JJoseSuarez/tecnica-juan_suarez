@@ -41,5 +41,4 @@ export class LoginPage implements OnInit {
       console.log(submitForm);
     }
   }
-  
 }

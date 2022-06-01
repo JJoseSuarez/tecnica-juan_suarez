@@ -6,7 +6,6 @@
         background-image: url('../../assets/imgs/background.jpg');
         height: 100vh;
         .content {
-            background-color: white;
             max-width: 400px;
             max-height: 500px;
             margin: 0 auto;
@@ -35,7 +34,8 @@
                     margin-left: 4px;
                 }
                 .errors-form {
-                    margin-left: 8px;
+                    padding-left: 8px;
+                    background-color: white;
                 }
                 .pass-icon {
                     cursor: pointer;
