@@ -21,6 +21,28 @@
                     max-width: 150px;
                     max-height: 200px;
                 }
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+            .form-container {
+                padding-top: 0px;
+                .submit-button-container {
+                    padding: 8px 0;
+                    background-color: white;
+                    ion-button {
+                        width: 180px;
+                        border: 1.5px solid #009FDA;
+                        border-radius: 40px;
+                        --border-radius: 40px;
+                        --background: white;
+                        --color: black;
+                      }
+                      ion-button:hover {
+                        --color: white;
+                        --background: #009FDA;
+                      }
+                }
             }
         }
     }
@@ -31,5 +53,8 @@
     }
     .img-title-container p {
         display: none;
+    }
+    .form-container {
+        margin-top: 32px;
     }
 }

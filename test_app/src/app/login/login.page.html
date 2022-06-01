@@ -6,6 +6,22 @@
           <img class="img-content" src="../../assets/imgs/logo.jpg">
           <p>Prueba técnica</p>
         </div>
+        <div class="form-container">
+          <form [formGroup]="loginForm">
+            <ion-item class="item-content">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input type="email" placeholder="Email" name="email" formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item class="item-content">
+              <ion-icon class="pass-icon" *ngIf="lockPassword" name="lock-closed-outline" (click)="showInputPassword(true)"></ion-icon>
+              <ion-icon class="pass-icon" *ngIf="!lockPassword" name="lock-open-outline" (click)="showInputPassword(false)"></ion-icon>
+              <ion-input [type]="typeTextPassword" placeholder="Contraseña" name="password" formControlName="password"></ion-input>
+            </ion-item>
+            <div class="submit-button-container">
+              <ion-button class="ion-button-login" (click)="buttonAction('OK')">Acceder</ion-button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
