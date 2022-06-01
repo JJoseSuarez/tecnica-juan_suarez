@@ -8,6 +8,7 @@
         .content {
             max-width: 400px;
             max-height: 500px;
+            background-color: white;
             margin: 0 auto;
             text-align: center;
             position: absolute;
@@ -15,23 +16,18 @@
             left: 0;
             right: 0;
             .img-title-container {
-                background-color: white;
                 padding-top: 24px;
                 .img-content {
                     max-width: 150px;
-                    max-height: 200px;
-                }
-                p {
-                    margin-bottom: 0px;
                 }
             }
             .form-container {
-                padding-top: 0px;
+                margin: 0 16px;
                 ion-item {
                     color: grey;
                 }
                 ion-input {
-                    margin-left: 4px;
+                    margin-left: 8px;
                 }
                 .errors-form {
                     padding-left: 8px;
@@ -42,14 +38,14 @@
                 }
                 .submit-button-container {
                     padding: 16px 0;
-                    background-color: white;
                     ion-button {
-                        width: 180px;
-                        border: 1.5px solid #009FDA;
+                        width: 160px;
+                        border: 2px solid #009FDA;
                         border-radius: 40px;
                         --border-radius: 40px;
                         --background: white;
                         --color: black;
+                        text-transform: capitalize;
                       }
                       ion-button:hover {
                         --color: white;
@@ -79,15 +75,14 @@
 @media (max-width: 468px) {
     .content {
         margin: 0 16px !important;
-    }
-    .img-title-container {
-        background: transparent !important;
+        background-color: transparent !important;
     }
     .img-title-container p {
         display: none;
     }
     .form-container {
-        margin-top: 32px;
+        margin: 32px !important;
+        padding: 0 16px !important;
     }
     .submit-button-container {
         padding: 0 !important;
