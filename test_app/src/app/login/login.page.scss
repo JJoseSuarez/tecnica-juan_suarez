@@ -6,6 +6,7 @@
         background-image: url('../../assets/imgs/background.jpg');
         height: 100vh;
         .content {
+            background-color: white;
             max-width: 400px;
             max-height: 500px;
             margin: 0 auto;
@@ -32,6 +33,9 @@
                 }
                 ion-input {
                     margin-left: 4px;
+                }
+                .errors-form {
+                    margin-left: 8px;
                 }
                 .pass-icon {
                     cursor: pointer;
@@ -60,6 +64,14 @@
                     align-items: center;
                     padding-left: 24px;
                 }
+                .errors-form {
+                    display: flex;
+                    p{
+                      color: red;
+                      font-weight: bold;
+                      font-size: 12px;
+                    }
+                  }
             }
         }
     }

@@ -11,7 +11,9 @@ export class LoginPage implements OnInit {
 
   loginForm: FormGroup;
 
+  // Control vars
   lockPassword: boolean = true;
+  buttonLoginBoolean: boolean = false;
   typeTextPassword: string = 'password';
 
   constructor() { }
@@ -34,6 +36,7 @@ export class LoginPage implements OnInit {
    }
   }
   buttonAction(submitForm: string) {
+    this.buttonLoginBoolean = true;
     if (this.loginForm.status !== 'INVALID') {
       console.log(submitForm);
     }
