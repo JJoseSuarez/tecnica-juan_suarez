@@ -27,8 +27,17 @@
             }
             .form-container {
                 padding-top: 0px;
+                ion-item {
+                    color: grey;
+                }
+                ion-input {
+                    margin-left: 4px;
+                }
+                .pass-icon {
+                    cursor: pointer;
+                }
                 .submit-button-container {
-                    padding: 8px 0;
+                    padding: 16px 0;
                     background-color: white;
                     ion-button {
                         width: 180px;
@@ -43,11 +52,22 @@
                         --background: #009FDA;
                       }
                 }
+                .reminder-container {
+                    background-color: white;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 24px;
+                }
             }
         }
     }
 }
 @media (max-width: 468px) {
+    .content {
+        margin: 0 16px !important;
+    }
     .img-title-container {
         background: transparent !important;
     }
@@ -56,5 +76,16 @@
     }
     .form-container {
         margin-top: 32px;
+    }
+    .submit-button-container {
+        padding: 0 !important;
+        ion-button {
+            width: 100% !important;
+            color: white;
+            --background: #009FDA !important;
+            --border-radius: 0px !important;
+            border: none !important;
+            margin: 0;
+          }
     }
 }

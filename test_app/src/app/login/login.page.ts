@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PATTERNS } from '../utils/validators_pattern';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +18,9 @@ export class LoginPage implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required])
+      email: new FormControl('', [Validators.required, Validators.pattern(PATTERNS.PATTERN_EMAIL)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      reminder: new FormControl(false)
     });
   }
 

@@ -8,15 +8,19 @@
         </div>
         <div class="form-container">
           <form [formGroup]="loginForm">
-            <ion-item class="item-content">
+            <ion-item>
               <ion-icon name="person-outline"></ion-icon>
               <ion-input type="email" placeholder="Email" name="email" formControlName="email"></ion-input>
             </ion-item>
-            <ion-item class="item-content">
+            <ion-item>
               <ion-icon class="pass-icon" *ngIf="lockPassword" name="lock-closed-outline" (click)="showInputPassword(true)"></ion-icon>
               <ion-icon class="pass-icon" *ngIf="!lockPassword" name="lock-open-outline" (click)="showInputPassword(false)"></ion-icon>
               <ion-input [type]="typeTextPassword" placeholder="Contraseña" name="password" formControlName="password"></ion-input>
             </ion-item>
+            <div class="reminder-container">
+              <p>Recordar</p>
+              <ion-toggle name="reminder" formControlName="reminder" color="primary"></ion-toggle>
+            </div>
             <div class="submit-button-container">
               <ion-button class="ion-button-login" (click)="buttonAction('OK')">Acceder</ion-button>
             </div>
