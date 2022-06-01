@@ -1,0 +1,35 @@
+#main-container {
+    background-color: grey;
+    .main-content {
+        max-width: 960px;
+        margin: 0 auto;
+        background-image: url('../../assets/imgs/background.jpg');
+        height: 100vh;
+        .content {
+            max-width: 400px;
+            max-height: 500px;
+            margin: 0 auto;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 0;
+            right: 0;
+            .img-title-container {
+                background-color: white;
+                padding-top: 24px;
+                .img-content {
+                    max-width: 150px;
+                    max-height: 200px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 468px) {
+    .img-title-container {
+        background: transparent !important;
+    }
+    .img-title-container p {
+        display: none;
+    }
+}
